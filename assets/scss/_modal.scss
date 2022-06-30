@@ -1,0 +1,51 @@
+/* Modal Styling Offerings Page */
+.tabContainer h6 {
+  text-align: center;
+}
+
+#modalLink {
+  background-color: $linkClr;
+  border-radius: 100em;
+  color: $textCommon;
+  text-decoration:none;
+}
+
+#modalLink:hover {
+  color: black;
+  background-color: $modalTabs;
+}
+
+#modalContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background: hsla(360, 0%, 0%, .5);
+}
+
+#modalContent {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $modalTabs;
+  text-align: center;
+  padding: 1em;
+  width: 300px;
+  border: 1em solid $linkClr;
+  border-radius: 3em;
+}
+
+#modalContent h6 {
+margin:0 0 1em;
+}
+
+#modalContent a {
+  padding:0;
+  text-decoration:none;
+}

@@ -1,0 +1,40 @@
+/* Promo Design */
+.promodesign {
+  max-width: 900px;
+  margin: 10px auto 10px;
+  display: flex;
+  background-color: $container;
+  @include bp(tablet){
+    flex-direction: column;
+  }
+}
+
+.promolayout {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid $bodyBG;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.promolayout img {
+  max-width: 100%;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.promoSize img {
+  object-position: 30% 80%;
+}
+
+.promolayout h3 {
+  text-align: center;
+  margin: 10px;
+}
+
+.promolayout p, a {
+  padding: 10px;
+  margin: 3px;
+}

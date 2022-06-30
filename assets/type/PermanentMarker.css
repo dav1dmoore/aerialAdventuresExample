@@ -1,0 +1,12 @@
+/* Webfont: PermanentMarker */@font-face {
+    font-family: 'PermanentMarker';
+    src: url('PermanentMarker.eot'); /* IE9 Compat Modes */
+    src: url('PermanentMarker.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('PermanentMarker.woff') format('woff'), /* Modern Browsers */
+         url('PermanentMarker.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('PermanentMarker.svg#PermanentMarker') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

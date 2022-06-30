@@ -1,0 +1,56 @@
+// Imports
+@import 'mixins';
+@import 'colors';
+@import 'type';
+@import 'layout';
+@import 'navigation';
+@import 'tables';
+@import 'forms';
+@import 'promos';
+@import 'footer';
+@import 'accordian';
+@import 'modal';
+@import 'mediaQry'; // 3 Color Variables
+$menu1: red;
+$menu2: blue;
+$menu3: green;
+$base: $menu1;
+
+.darker,
+.lighter,
+.muted,
+.rainbow {
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+  }
+}
+
+
+// MENUPALOOZA - COMMENT in to see changes!! - they change the aerial website;
+// @for $i from 1 through 37 {
+//     li:nth-child(#{$i}) {
+//     background: lighten($base, $i * 1.2);
+//     .darker & { background: darken($base, $i * 1.2);};
+//     .rainbow & { background: adjust-hue($base, $i * 13);};
+//     .muted & { background: hsl(0,100 - $i * 3, 50);};
+//   }
+// }
+
+
+@for $i from 1 through 6 {
+  .childNav li:nth-child(#{$i}) {
+    a {
+      background: lighten($linkStChg, $i * 2.75);
+
+      &:hover {
+        background: darken($linkStChg, .5%);
+      }
+    }
+  }
+}

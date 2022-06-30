@@ -1,0 +1,182 @@
+html {
+  font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (3200 - 300)));
+}
+
+body {
+  @include back-ground-image(to bottom right, $bodyBG, $textCommon);
+  // background-color:$bodyBG;
+  font-family: Overpass-Regular, "Avenir Book", "Trebuchet MS", Arial, sans-serif;
+}
+
+p {
+  line-height: 150%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: PermanentMarker, Georgia, serif;
+  /* word-spacing: -.25em; */
+  margin: 0px;
+  padding: .25em;
+}
+
+h6 {
+  font-size: calc(12px + (24 - 12) * ((100vw - 300px) / (1800 - 300)));
+}
+
+h5 {
+  font-size: 1.56rem;
+}
+
+h4 {
+  font-size: 1.95rem;
+}
+
+h3 {
+  font-size: 2.44rem;
+}
+
+h2 {
+  font-size: 3.05rem;
+}
+
+h1 {
+  font-size: calc(24px + (124 - 24) * ((100vw - 300px) / (3200 - 300)))
+}
+
+a, a:link, a:visited {
+  color: $linkClr;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+a:hover, a:active {
+  color: $linkClr;
+}
+
+#container {
+  max-width: 900px;
+  margin: 2vh auto 1vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $container;
+}
+
+header {
+  @include back-ground-image(to bottom right, #0f1419, #00387d);
+  min-height: 8em;
+  position: relative;
+  border-bottom: thick solid $linkStChg;
+  @include bp(tablet){
+    display: flex;
+    flex-direction: column;
+    max-width: 875px;
+  }
+  @include bp(cell){
+    display: flex;
+    flex-direction: column;
+    max-width: 328px;
+  }
+}
+
+#logo {
+  position: absolute;
+  float: left;
+  margin: 2em;
+  width: auto;
+  @include bp(tablet){
+    display: block;
+    float: none;
+    position: unset;
+    margin: auto;
+  }
+  @include bp(cell){
+    display: block;
+    float: none;
+    position: unset;
+    margin: auto;
+  }
+}
+
+#bodyText {
+  width: 70%;
+  padding-top: 1.75em;
+  padding-bottom: 2em;
+  margin: 0 auto auto;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+#bigImage1 {
+  position: relative;
+}
+
+.heroShrink {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  position: relative;
+  @include bp(tablet){
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+#bigImage1 figcaption {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#bigImage3 {
+  height: auto;
+  background-image: url(../images/DD0J2839_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include bp(cell){
+    height: auto;
+  }
+}
+
+#offeringsPage figcaption {
+  top: auto;
+  bottom: 10px;
+}
+
+#pageHeadline1 {
+  color: $textCommon;
+  padding: 0px;
+  margin: 0px;
+  text-shadow: 2px 2px 5px #090F2D;
+  @include bp(cell){
+    font-size: calc(10px + 2 * ((100vw - 320px) / 680));
+    padding: 0;
+  }
+}
+
+// #pageHeadline2 {
+//   color: $textCommon;
+//   padding: 20em 2em;
+//   clear: both;
+//   text-shadow: 2px 2px 5px #090F2D;
+// }
+
+.hamburger {
+  display: none;
+}
+
+.arrow {
+  display: none;
+}
+/* Assign Selected Class to Nav by Jquery */
+
+.selected {
+background-color: $linkStChg !important;
+font-weight: bolder !important;
+}

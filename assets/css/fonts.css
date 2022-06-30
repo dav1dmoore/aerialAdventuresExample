@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'MarckScript';
+	src: url('../fonts/MarckScript-Regular.eot');
+	/* IE9 Compat Modes */
+	src: url('../fonts/MarckScript-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/MarckScript-Regular.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/MarckScript-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('../fonts/MarckScript-Regular.svg#MarckScript-Regular') format('svg');
+	/* Legacy iOS */
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+}
+
+@font-face {
+	font-family: 'LatoLight';
+	src: url('../fonts/Lato-LightItalic.eot');
+	/* IE9 Compat Modes */
+	src: url('../fonts/Lato-LightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/Lato-LightItalic.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/Lato-LightItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('../fonts/Lato-LightItalic.svg#Lato-LightItalic') format('svg');
+	/* Legacy iOS */
+	font-style: italic;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+}
+
+@font-face {
+	font-family: 'LatoLight';
+	src: url('../fonts/Lato-Light.eot');
+	/* IE9 Compat Modes */
+	src: url('../fonts/Lato-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/Lato-Light.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/Lato-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('../fonts/Lato-Light.svg#Lato-Light') format('svg');
+	/* Legacy iOS */
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+}

@@ -1,0 +1,27 @@
+/* Footer */
+.footerContainer {
+  max-width: 900px;
+  margin: 1vh auto;
+  display: flex;
+  background-color: $container;
+  text-align: center;
+  flex-direction: column;
+}
+
+.footerList {
+  padding-inline-start: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#footerList {
+  margin: 10px 0px 10px;
+}
+
+#siteMap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px 0px 10px;
+  flex: 1 1 auto;
+}

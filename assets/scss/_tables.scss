@@ -1,0 +1,30 @@
+
+table {
+  border: thin none black;
+  border-collapse: collapse;
+  border-spacing: .5em;
+  margin: 1em;
+  width: auto;
+}
+
+tr {
+  border-bottom: thin solid $linkClr;
+}
+
+th {
+  background-color: $linkClr;
+  vertical-align: bottom;
+}
+
+td, th {
+  padding: .4em .4em;
+  text-align: center;
+}
+
+.trHighlight {
+  opacity: .6;
+}
+
+.bigger {
+  font-size: larger;
+}

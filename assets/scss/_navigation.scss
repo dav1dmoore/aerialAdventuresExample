@@ -1,0 +1,218 @@
+/* First Level */
+nav {
+  position: absolute;
+  height: auto;
+  bottom: 0px;
+  width: auto;
+  right: 1em;
+  @include bp(tablet){
+    position: unset;
+    width: auto;
+    height: auto;
+  }
+  @include bp(cell){
+    position: unset;
+    bottom: 0px;
+    width: auto;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    @include bp(tablet){
+      list-style: none;
+      margin: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;}
+    @include bp(cell){
+      list-style: none;
+      margin: 0px;
+      padding: px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+
+    ul li>a {
+      padding: .75em;
+      margin: 0 0 0 13px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+
+      &:link, &:visited {
+          background-color: $linkStChg;
+      }
+
+      &:hover {
+          background-color: $linkHvr;
+      }
+    }
+
+
+    li a {
+      display: block;
+      text-align: center;
+      padding: .75em .75em .5em .75em;
+      margin: .75em .75em 0em .75em;
+      border-top-left-radius: 1em;
+      border-top-right-radius: 1em;
+      position: relative;
+      @include bp(desktop){
+          min-width: 150px;
+          width: auto;
+        }
+
+      &:link, &:visited {
+        color: $textCommon;
+        background-color: $linkClr;
+        text-decoration: none;
+        @include bp(tablet){
+          margin: 0px;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+
+      &:hover, &:active {
+        background-color: $linkStChg;
+        @include bp(tablet){
+          background-color: $linkStChg;
+        }
+      }
+    }
+
+    li:hover>ul {
+      @include bp(desktop){
+        display: block;
+        position: absolute;
+        z-index: 1000;
+        min-width: 150px;
+        width: auto;
+      }
+    }
+    ul {
+      @include bp(tablet){
+        width:100%;
+      }
+    }
+  }
+  li {
+    @include bp(tablet){
+      flex: 1 1 auto;
+    }
+    @include bp(cell){
+      flex: 1 1 auto;
+    }
+  }
+}
+
+.parentNav {
+  @include bp(tablet){
+    display: none;
+  }
+}
+
+/* 2nd Level*/
+.childNav {
+  display: none;
+}
+
+#subNav {
+  width: 100%;
+  height: auto;
+  background-color: $linkStChg;
+  @include bp(tablet){text-align: -webkit-center;}
+
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    @include bp(tablet){
+      flex-wrap: wrap;}
+      @include bp(cell){
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
+
+    li {
+      display: inline-block;
+      @include bp(tablet){flex: 1 1 33.333%}
+      @include bp(cell){flex: 1 1 auto;}
+
+      a {
+        &:link, &:visited {
+          display: block;
+          width: 90%;
+          text-align: center;
+          margin: .75em;
+          color: $textCommon;
+          text-decoration: none;
+          margin: 0;
+        }
+
+        &:active, &:hover {
+          background-color: $subNavHvr;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+label.hamburger {
+  @include bp(tablet){
+    display: flex;
+    font-size: x-large;
+    flex-flow: column;
+    float: none;
+    color: $textCommon;
+    background-color: $linkClr;
+    width: auto;
+    text-align: center;
+    margin-right: 0;
+    padding: .25em;
+  }
+
+  &:after {
+    @include bp(tablet){
+        content: "☰";
+    }
+  }
+}
+label.arrow {
+  @include bp(tablet){
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  float: none;
+  color: $textCommon;
+  background-color: $linkClr;
+  width: auto;
+  text-align: left;
+  margin-right: 0;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: x-large;
+}
+}
+
+li label#arrowNav:after {
+  @include bp(tablet){font-size: 80%;
+  content: "▶";
+  display: inline-block;
+  transition: .25s ease-in-out transform;
+}
+}
+
+li input[type=checkbox]:checked~label#arrowNav:after {
+  @include bp(tablet){
+    transform: rotate(90deg);
+}
+}

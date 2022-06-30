@@ -1,0 +1,9 @@
+$base: blue;
+
+@for $i from 1 through 36 {
+.lighter li:nth-child(1n+1){
+background: $base;
+}
+$base : lighten($base, 2.5%);
+$i : $i + 1
+}

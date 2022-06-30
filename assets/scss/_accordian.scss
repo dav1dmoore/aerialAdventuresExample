@@ -1,0 +1,140 @@
+/* Book Adventure Accordian */
+.bookContainer {
+  display: flex;
+  @include center();
+  @include bp(tablet){
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+button {
+  border: none;
+  padding: .25em;
+  background-color: $bookingClr;
+  color: black;
+  font-family: -webkit-body;
+  font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (3200 - 300)));
+}
+
+.accordian {
+  list-style-type: none;
+  text-align: left;
+  background-color: $bookingClr;
+  margin: 1em auto;
+  width: 100%;
+  padding: .25em;
+  border-radius: 1em;
+  width: calc(303px + 2 * ((100vw - 328px) / 680));
+  @include bp(cell){
+      width: calc(240px + 2 * ((100vw - 328px) / 680));
+  }
+}
+
+.accordian>li {
+  border-bottom: 1px solid $accordianClr;
+}
+
+.accordian>li:last-child {
+  border-bottom: none;
+}
+
+.accordian-panel {
+  background: $accordianClr;
+  text-align: center;
+  padding: 1em;
+  font-family: -webkit-body;
+  display: none;
+  border-radius: .25em;
+}
+
+/* Tab Panel on Offerings Page */
+
+.tabContainer {
+display: flex;
+flex-direction: column;
+}
+
+/********** TABS **********/
+.tab-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  @include bp(tablet){
+    flex-direction: column;
+  }
+}
+
+.tab-list li {
+    flex-grow: 1;
+  list-style-type: none;
+  /* margin: 0 .5px; */
+}
+
+.tab-list li a {
+  color: $textCommon;
+  background-color: $linkClr;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  display: block;
+  padding: 3px 10px 3px 10px;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 1px;
+  @include bp(tablet){
+    border-radius: 0;
+  }
+}
+
+
+/********** HOVER STATES **********/
+.tab-list li.active a, .tab-list li a:hover {
+  color: black;
+  background-color: $modalTabs;
+  width: auto;
+  height: auto;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+
+}
+
+
+/********** PANELS **********/
+.tab-panel {
+  display: none;
+  background-color: $modalTabs;
+  color: black;
+  min-height: 150px;
+  overflow: auto;
+  text-align: center;
+}
+
+/* .tab-panel.active {
+  display: block;
+} */
+
+.tab-panel p {
+  margin: 20px;
+}
+
+.parentCont {
+  @include bp(tablet){
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.childCont0 {
+  @include bp(tablet){
+    flex-grow: 1;
+    text-align: right;
+  }
+}
+
+.childCont1 {
+  @include bp(tablet){
+    flex-grow: 4;
+  }
+}
