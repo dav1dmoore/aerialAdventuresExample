@@ -1,22 +1,22 @@
 /* Main Navigation */
-$(function() {
-  $('#hamburgerNav').on('click', function() {
+$(function () {
+  $('#hamburgerNav').on('click', function () {
     $('.parentNav').slideToggle(500);
   });
 
-  $('#arrowNav').on('click', function() {
+  $('#arrowNav').on('click', function () {
     $('#childNav1').slideToggle(500);
   });
 
-  $('#arrowNav1').on('click', function() {
+  $('#arrowNav1').on('click', function () {
     $('#childNav2').slideToggle(500);
   });
 
   const cardsAndArticles = $('.info-card, .info-card article');
   cardsAndArticles.hide();
 
-  $(function() {
-    $('tr').on('click', function() {
+  $(function () {
+    $('tr').on('click', function () {
 
       const thisCard = $(this).next('.info-card');
       const thisArt = thisCard.find('article');
@@ -40,7 +40,7 @@ $(function() {
 });
 
 
-$('button').on('click', function(e) {
+$('button').on('click', function (e) {
   e.preventDefault();
   var $attCont = $(this).attr('class');
   var $testStrict = /.*-strict/.test($attCont);
@@ -67,7 +67,7 @@ $('button').on('click', function(e) {
 });
 
 /* Offerings Page Tab Panel */
-$('a.tab-control').on('click', function(e) {
+$('a.tab-control').on('click', function (e) {
   e.preventDefault();
   const $this = $(this);
   const $link = $this.attr('href');
@@ -84,14 +84,14 @@ $('a.tab-control').on('click', function(e) {
 });
 
 /* Modal Activity Offerings Page */
-$(function() {
-  $('#modalLink').on('click', function(e) {
+$(function () {
+  $('#modalLink').on('click', function (e) {
     e.preventDefault();
     $('#modalContainer').css('display', 'flex')
   });
 
-  $(function() {
-    $('#modalClose').on('click', function(e) {
+  $(function () {
+    $('#modalClose').on('click', function (e) {
       e.preventDefault();
       $('#modalContainer').css('display', 'none');
     });
@@ -100,12 +100,12 @@ $(function() {
 
 
 /* Highlight Navigation By matching */
-$(function() {
+$(function () {
   const $thisPage = document.location.href;
   const $currentPage = $thisPage.match(/[^\/]+$/)[0];
   const thisLink = $('.parentNav>li>a')
 
-  $('.parentNav>li>a').each(function() {
+  $('.parentNav>li>a').each(function () {
     $link = $(this).attr('href');
     if ($currentPage == $link) {
       $(this).addClass('selected');
@@ -116,7 +116,7 @@ $(function() {
     const $next = $thisAnchor.parent().next().find('a');
     const $prev = $thisAnchor.parent().prev().find('a');
 
-    $(document).keydown(function(e) {
+    $(document).keydown(function (e) {
       switch (e.which) {
         case 37: // left cursor key
           if ($prev.length == 0) {

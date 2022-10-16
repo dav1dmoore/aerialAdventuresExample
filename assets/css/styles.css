@@ -783,9 +783,6 @@ button {
   text-align: center;
 }
 
-/* .tab-panel.active {
-  display: block;
-} */
 .tab-panel p {
   margin: 20px;
 }
@@ -861,22 +858,6 @@ button {
 #modalContent a {
   padding: 0;
   text-decoration: none;
-}
-
-@media screen and (max-width: 875px) {
-  /* input[type=checkbox]:checked~.parentNav {
-    display: flex;
-  } */
-  /* li input[type=checkbox]:checked~.childNav {
-    display: flex;
-    flex-direction: column;
-    position: static;
-  } */
-  /* nav ul li:hover>ul {
-    display: none;
-    flex-direction: column;
-    position: static;
-  } */
 }
 
 .darker li,
