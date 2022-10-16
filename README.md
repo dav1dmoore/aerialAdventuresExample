@@ -7,3 +7,5 @@ SASS is an extension language that was used to improve the organization of my CS
 jQuery is a JavaScript library that simplifies and expedites the implementation of standard JavaScript. I employed jQuery to significantly reduce the amount of code I needed to achieve the project's functionality. jQuery was used in the creation of the navigation and the feature to highlight/identify the corresponding title of the selected page, the modal activity, offerings' page accordian, and details' page panels.<br>
 
 ** First build, prior to learning full-stack web development. **
+
+https://dav1dmoore.github.io/aerialAdventuresExample/
