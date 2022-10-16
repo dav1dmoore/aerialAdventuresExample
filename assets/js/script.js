@@ -39,7 +39,7 @@ $(function () {
 
 });
 
-
+// Details page
 $('button').on('click', function (e) {
   e.preventDefault();
   var $attCont = $(this).attr('class');

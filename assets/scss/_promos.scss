@@ -4,7 +4,8 @@
   margin: 10px auto 10px;
   display: flex;
   background-color: $container;
-  @include bp(tablet){
+
+  @include bp(tablet) {
     flex-direction: column;
   }
 }
@@ -34,7 +35,8 @@
   margin: 10px;
 }
 
-.promolayout p, a {
+.promolayout p,
+a {
   padding: 10px;
   margin: 3px;
 }

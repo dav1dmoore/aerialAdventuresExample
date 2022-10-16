@@ -5,12 +5,14 @@ nav {
   bottom: 0px;
   width: auto;
   right: 1em;
-  @include bp(tablet){
+
+  @include bp(tablet) {
     position: unset;
     width: auto;
     height: auto;
   }
-  @include bp(cell){
+
+  @include bp(cell) {
     position: unset;
     bottom: 0px;
     width: auto;
@@ -21,13 +23,16 @@ nav {
     margin: 0px;
     padding: 0px;
     display: flex;
-    @include bp(tablet){
+
+    @include bp(tablet) {
       list-style: none;
       margin: 0px;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;}
-    @include bp(cell){
+      justify-content: space-around;
+    }
+
+    @include bp(cell) {
       list-style: none;
       margin: 0px;
       padding: px;
@@ -43,12 +48,13 @@ nav {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
 
-      &:link, &:visited {
-          background-color: $linkStChg;
+      &:link,
+      &:visited {
+        background-color: $linkStChg;
       }
 
       &:hover {
-          background-color: $linkHvr;
+        background-color: $linkHvr;
       }
     }
 
@@ -61,32 +67,37 @@ nav {
       border-top-left-radius: 1em;
       border-top-right-radius: 1em;
       position: relative;
-      @include bp(desktop){
-          min-width: 150px;
-          width: auto;
-        }
 
-      &:link, &:visited {
+      @include bp(desktop) {
+        min-width: 150px;
+        width: auto;
+      }
+
+      &:link,
+      &:visited {
         color: $textCommon;
         background-color: $linkClr;
         text-decoration: none;
-        @include bp(tablet){
+
+        @include bp(tablet) {
           margin: 0px;
           border-top-left-radius: 0;
           border-top-right-radius: 0;
         }
       }
 
-      &:hover, &:active {
+      &:hover,
+      &:active {
         background-color: $linkStChg;
-        @include bp(tablet){
+
+        @include bp(tablet) {
           background-color: $linkStChg;
         }
       }
     }
 
     li:hover>ul {
-      @include bp(desktop){
+      @include bp(desktop) {
         display: block;
         position: absolute;
         z-index: 1000;
@@ -94,24 +105,27 @@ nav {
         width: auto;
       }
     }
+
     ul {
-      @include bp(tablet){
-        width:100%;
+      @include bp(tablet) {
+        width: 100%;
       }
     }
   }
+
   li {
-    @include bp(tablet){
+    @include bp(tablet) {
       flex: 1 1 auto;
     }
-    @include bp(cell){
+
+    @include bp(cell) {
       flex: 1 1 auto;
     }
   }
 }
 
 .parentNav {
-  @include bp(tablet){
+  @include bp(tablet) {
     display: none;
   }
 }
@@ -125,7 +139,10 @@ nav {
   width: 100%;
   height: auto;
   background-color: $linkStChg;
-  @include bp(tablet){text-align: -webkit-center;}
+
+  @include bp(tablet) {
+    text-align: -webkit-center;
+  }
 
 
   ul {
@@ -134,20 +151,31 @@ nav {
     list-style: none;
     margin: 0px;
     padding: 0px;
-    @include bp(tablet){
-      flex-wrap: wrap;}
-      @include bp(cell){
-        flex-direction: column;
-        flex-wrap: nowrap;
-      }
+
+    @include bp(tablet) {
+      flex-wrap: wrap;
+    }
+
+    @include bp(cell) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
 
     li {
       display: inline-block;
-      @include bp(tablet){flex: 1 1 33.333%}
-      @include bp(cell){flex: 1 1 auto;}
+
+      @include bp(tablet) {
+        flex: 1 1 33.333%
+      }
+
+      @include bp(cell) {
+        flex: 1 1 auto;
+      }
 
       a {
-        &:link, &:visited {
+
+        &:link,
+        &:visited {
           display: block;
           width: 90%;
           text-align: center;
@@ -157,7 +185,8 @@ nav {
           margin: 0;
         }
 
-        &:active, &:hover {
+        &:active,
+        &:hover {
           background-color: $subNavHvr;
           margin: 0;
         }
@@ -167,7 +196,7 @@ nav {
 }
 
 label.hamburger {
-  @include bp(tablet){
+  @include bp(tablet) {
     display: flex;
     font-size: x-large;
     flex-flow: column;
@@ -181,38 +210,40 @@ label.hamburger {
   }
 
   &:after {
-    @include bp(tablet){
-        content: "☰";
+    @include bp(tablet) {
+      content: "☰";
     }
   }
 }
+
 label.arrow {
-  @include bp(tablet){
-  display: flex;
-  flex-flow: column;
-  flex-grow: 1;
-  float: none;
-  color: $textCommon;
-  background-color: $linkClr;
-  width: auto;
-  text-align: left;
-  margin-right: 0;
-  align-items: flex-start;
-  justify-content: center;
-  font-size: x-large;
-}
+  @include bp(tablet) {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    float: none;
+    color: $textCommon;
+    background-color: $linkClr;
+    width: auto;
+    text-align: left;
+    margin-right: 0;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: x-large;
+  }
 }
 
 li label#arrowNav:after {
-  @include bp(tablet){font-size: 80%;
-  content: "▶";
-  display: inline-block;
-  transition: .25s ease-in-out transform;
-}
+  @include bp(tablet) {
+    font-size: 80%;
+    content: "▶";
+    display: inline-block;
+    transition: .25s ease-in-out transform;
+  }
 }
 
 li input[type=checkbox]:checked~label#arrowNav:after {
-  @include bp(tablet){
+  @include bp(tablet) {
     transform: rotate(90deg);
-}
+  }
 }

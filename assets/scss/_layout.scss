@@ -11,7 +11,12 @@ p {
   line-height: 150%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: PermanentMarker, Georgia, serif;
   margin: 0px;
   padding: .25em;
@@ -41,13 +46,16 @@ h1 {
   font-size: calc(24px + (124 - 24) * ((100vw - 300px) / (3200 - 300)))
 }
 
-a, a:link, a:visited {
+a,
+a:link,
+a:visited {
   color: $linkClr;
   font-style: italic;
   text-decoration: underline;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   color: $linkClr;
 }
 
@@ -64,12 +72,14 @@ header {
   min-height: 8em;
   position: relative;
   border-bottom: thick solid $linkStChg;
-  @include bp(tablet){
+
+  @include bp(tablet) {
     display: flex;
     flex-direction: column;
     max-width: 875px;
   }
-  @include bp(cell){
+
+  @include bp(cell) {
     display: flex;
     flex-direction: column;
     max-width: 328px;
@@ -81,13 +91,15 @@ header {
   float: left;
   margin: 2em;
   width: auto;
-  @include bp(tablet){
+
+  @include bp(tablet) {
     display: block;
     float: none;
     position: unset;
     margin: auto;
   }
-  @include bp(cell){
+
+  @include bp(cell) {
     display: block;
     float: none;
     position: unset;
@@ -118,7 +130,8 @@ figure {
   height: auto;
   margin: 0;
   position: relative;
-  @include bp(tablet){
+
+  @include bp(tablet) {
     display: block;
     max-width: 100%;
     height: auto;
@@ -137,7 +150,8 @@ figure {
   background-image: url(../images/DD0J2839_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  @include bp(cell){
+
+  @include bp(cell) {
     height: auto;
   }
 }
@@ -152,7 +166,8 @@ figure {
   padding: 0px;
   margin: 0px;
   text-shadow: 2px 2px 5px #090F2D;
-  @include bp(cell){
+
+  @include bp(cell) {
     font-size: calc(10px + 2 * ((100vw - 320px) / 680));
     padding: 0;
   }
@@ -165,9 +180,10 @@ figure {
 .arrow {
   display: none;
 }
+
 /* Assign Selected Class to Nav by Jquery */
 
 .selected {
-background-color: $linkStChg !important;
-font-weight: bolder !important;
+  background-color: $linkStChg !important;
+  font-weight: bolder !important;
 }

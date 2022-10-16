@@ -4,7 +4,8 @@
   height: 250px;
   margin: 1em auto;
   overflow: hidden;
-  @include bp(cell){
+
+  @include bp(cell) {
     width: 100%;
     height: auto;
   }
@@ -28,12 +29,14 @@ label {
   width: 4.5em;
   text-align: right;
   margin-right: .5em;
-  @include bp(cell){
+
+  @include bp(cell) {
     float: none;
     text-align: left;
   }
 }
 
-input.textinput, select {
+input.textinput,
+select {
   width: 8em;
 }

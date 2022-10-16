@@ -2,7 +2,8 @@
 .bookContainer {
   display: flex;
   @include center();
-  @include bp(tablet){
+
+  @include bp(tablet) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -26,8 +27,9 @@ button {
   padding: .25em;
   border-radius: 1em;
   width: calc(303px + 2 * ((100vw - 328px) / 680));
-  @include bp(cell){
-      width: calc(240px + 2 * ((100vw - 328px) / 680));
+
+  @include bp(cell) {
+    width: calc(240px + 2 * ((100vw - 328px) / 680));
   }
 }
 
@@ -51,8 +53,8 @@ button {
 /* Tab Panel on Offerings Page */
 
 .tabContainer {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 /********** TABS **********/
@@ -61,13 +63,14 @@ flex-direction: column;
   flex-direction: row;
   margin: 0;
   padding: 0;
-  @include bp(tablet){
+
+  @include bp(tablet) {
     flex-direction: column;
   }
 }
 
 .tab-list li {
-    flex-grow: 1;
+  flex-grow: 1;
   list-style-type: none;
 }
 
@@ -81,14 +84,16 @@ flex-direction: column;
   text-decoration: none;
   text-align: center;
   margin: 0 1px;
-  @include bp(tablet){
+
+  @include bp(tablet) {
     border-radius: 0;
   }
 }
 
 
 /********** HOVER STATES **********/
-.tab-list li.active a, .tab-list li a:hover {
+.tab-list li.active a,
+.tab-list li a:hover {
   color: black;
   background-color: $modalTabs;
   width: auto;
@@ -114,7 +119,7 @@ flex-direction: column;
 }
 
 .parentCont {
-  @include bp(tablet){
+  @include bp(tablet) {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -122,14 +127,14 @@ flex-direction: column;
 }
 
 .childCont0 {
-  @include bp(tablet){
+  @include bp(tablet) {
     flex-grow: 1;
     text-align: right;
   }
 }
 
 .childCont1 {
-  @include bp(tablet){
+  @include bp(tablet) {
     flex-grow: 4;
   }
 }

@@ -1,33 +1,50 @@
 // Gradient mixin
-@mixin back-ground-image($angle, $color1, $color2){
+@mixin back-ground-image($angle, $color1, $color2) {
   background-image: linear-gradient($angle, $color1, $color2);
-};
+}
+
+;
+
 //Center Mixin
-@mixin center(){
+@mixin center() {
   justify-content: center;
-};
+}
+
+;
 //Clearfix mixin
 
-@mixin clearfix(){
+@mixin clearfix() {
+
   &:before,
   &:after {
-    content:  "";
+    content: "";
     display: table;
   }
+
   &:after {
     clear: both;
   }
-};
+}
+
+;
 
 //Responsive Breakpoints
-@mixin bp($point){
-  @if $point == tablet {
-    @media(max-width: 875px){@content;}
-  }
-  @else if $point == cell {
-      @media (max-width: 328px){@content;}
+@mixin bp($point) {
+  @if $point==tablet {
+    @media(max-width: 875px) {
+      @content;
     }
-  @else if $point == desktop {
-        @media (min-width: 876px){@content;}
-      }
   }
+
+  @else if $point==cell {
+    @media (max-width: 328px) {
+      @content;
+    }
+  }
+
+  @else if $point==desktop {
+    @media (min-width: 876px) {
+      @content;
+    }
+  }
+}

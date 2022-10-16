@@ -1,4 +1,3 @@
-
 table {
   border: thin none black;
   border-collapse: collapse;
@@ -16,7 +15,8 @@ th {
   vertical-align: bottom;
 }
 
-td, th {
+td,
+th {
   padding: .4em .4em;
   text-align: center;
 }
